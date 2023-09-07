@@ -8,6 +8,12 @@ def hide_streamlit_widgets():
     //button {visibility: hidden;}
     #MainMenu {visibility: hidden;}
     button:has(svg) { visibility: visible;}
+
+    @media (max-width: 800px) {
+        .stChatFloatingInputContainer{
+            padding-bottom: 24px;
+        }
+    }
     </style>
     """
     st.markdown(hide_footer_style, unsafe_allow_html=True)
