@@ -1,14 +1,11 @@
 import streamlit as st
 import openai
 
+st.set_page_config(initial_sidebar_state="collapsed")
+
 def hide_streamlit_widgets():
     hide_footer_style = """
     <style>
-    div.stDeployButton {visibility: hidden;}
-    //button {visibility: hidden;}
-    #MainMenu {visibility: hidden;}
-    button:has(svg) { visibility: visible;}
-
     @media (max-width: 800px) {
         .stChatFloatingInputContainer{
             padding-bottom: 24px;
