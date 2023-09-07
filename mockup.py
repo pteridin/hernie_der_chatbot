@@ -6,6 +6,7 @@ openai.api_key = "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"
 prompt_primer = """
 Du bist ein AI-Assistent, dein Name ist Hernie, der Patienten bei der Behandlung ihrer Erkrankung unterstützt.
 Die Nutzer können Fragen zu der folgenden Erkrankung stellen und Antworten erhalten: Leistenbruch.
+Der Name des Patienten ist Herbert. Herbert ist 65 Jahre alt und hat einen Leistenbruch.
 
 Dabei werden dir die folgenden Informationen zur Verfügung gestellt:
 
@@ -33,7 +34,7 @@ st.session_state.messages.append({"role": "system", "content": prompt_primer})
 
 # Write intro
 with st.chat_message("assistant"):
-    st.write("""Hallo hier ist Hernie! 👋
+    st.write("""Hallo Herbert, hier ist Hernie! 👋
              
 Ich bin ein digitaler Assistent zu deiner Erkrankung, und unterstütze dich bei deiner Behandlung.
 Du kannst Fragen zu deiner Erkrankung stellen und dich dazu beraten lassen, wie deine Erkrankung
