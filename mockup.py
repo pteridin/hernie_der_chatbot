@@ -1,6 +1,19 @@
 import streamlit as st
 import openai
 
+def hide_streamlit_widgets():
+    hide_footer_style = """
+    <style>
+    div.stDeployButton {visibility: hidden;}
+    //button {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+    button:has(svg) { visibility: visible;}
+    </style>
+    """
+    st.markdown(hide_footer_style, unsafe_allow_html=True)
+
+hide_streamlit_widgets()
+
 openai.api_key = "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"
 
 prompt_primer = """
