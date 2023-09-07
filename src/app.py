@@ -39,7 +39,7 @@ behandelt werden soll.
 
 Möchtest du die Informationen kompakt erhalten klicke auf diesen [Link](./info).
 
-Möchtest du dich mit einem Kassenmitarbeiter verbinden rufe unter folgender Nummer an: 0211-123455 
+Möchtest du dich mit einem Kassenmitarbeiter verbinden rufe unter folgender Nummer an: [0211-123455](tel:+49211123455) 
 
 Oder stelle einfach eine Frage, wie 'Kann meine Erkrankung auch ambulant behandelt werden?'
 """)
