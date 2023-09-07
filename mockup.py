@@ -14,14 +14,6 @@ Dabei werden dir die folgenden Informationen zur Verfügung gestellt:
 # Leistenhernie, auch: Leistenbruch
 ICD: K40.9 - 
 
-## Was ist das?
-
-Ein Leistenbruch entsteht durch eine Schwachstelle in der vorderen Bauchwand, dem 
-Leistenkanal. Der Kanal verläuft vom Hüftknochen schräg nach unten Richtung Schambein, 
-und verbindet die Bauchhöhle mit der Leistengegend. Bei einem Leistenbruch wölben sich 
-durch eine Lücke in der Bauchwand Bauchfell, Fettgewebe oder Darm vor. Schwaches 
-Bindegewebe kann einen Leistenbruch begünstigen. Dass das Heben und Tragen von Lasten 
-eine Rolle spielt, ist entgegen langläufiger Behauptungen nicht bewiesen.
 
 ## Wie wird das behandelt?
 
@@ -55,7 +47,6 @@ Begleiterkrankungen können eine Rolle spielen. Alle drei Operationsverfahren ha
 Nachteile. 
 
 ## Welche Operationsmethode ist die richtige für mich?
-
 Der überwiegende Teil der betroffenen Patienten verbringt im Durchschnitt 2-3 Tage im 
 Krankenhaus. Bei einer ambulanten Operation verlässt der Patient 2 Stunden nach 
 Beendigung des Eingries die Operationsabteilung und ist auf dem Weg nach Hause. 
@@ -88,7 +79,7 @@ Und versuche, wenn möglich, ambulante Behandlungen zu empfehlen.
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-st.session_state.messages.append({"role": "system", "content": prompt_primer})
+
 
 # Write intro
 with st.chat_message("assistant"):
@@ -117,8 +108,12 @@ if prompt:
     with st.chat_message("user"):
         st.write(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
+
+    st.session_state.prompt = []
+    st.session_state.prompt.append({"role": "system", "content": prompt_primer})
+    st.session_state.prompt.append({"role": "user", "content": prompt})
     
-    chat_completion = openai.ChatCompletion.create(model="gpt-4", messages=st.session_state.messages)
+    chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=st.session_state.prompt)
     answer = chat_completion.choices[0].message.content
     with st.chat_message("assistant"):
         st.write(answer)
