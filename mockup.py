@@ -1,72 +1,37 @@
 import streamlit as st
-import time
+import openai
 
-import base64
+openai.api_key = "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"
 
-# Function to convert image to base64
-def img_to_base64(img_path):
-    with open(img_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
+# Initialize chat history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
-# Base64 encoding
-img_base64 = img_to_base64("iphone_home_screen.jpg")
+with st.chat_message("assistant"):
+    st.write("""Hallo hier ist Hernie! 👋
+             
+Ich bin ein digitaler Assistent zu deiner Erkrankung, und unterstütze dich bei deiner Behandlung.
+Du kannst Fragen zu deiner Erkrankung stellen und dich dazu beraten lassen, wie deine Erkrankung
+behandelt werden soll.
 
-# Setting the page configuration
-st.set_page_config(
-    page_title="iPhone Home Screen",
-    layout="centered",
-    initial_sidebar_state="collapsed",
-)
+Möchtest du die Informationen kompakt erhalten klicke auf diesen Link.
 
-# Display the iPhone home screen as a background image
-st.markdown(
-    f"""
-    <style>
-        div.stApp {{
-            background-image: url("data:image/jpg;base64,{img_base64}");
-            background-size: 400px 800px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+Möchtest du dich mit einem Kassenmitarbeiter verbinden rufe unter folgender Nummer an: 0211-123455 
 
-# Custom CSS for the iPhone message popup
-st.markdown(
-    """
-    <style>
-        .iphone-popup {
-            background-color: #ffffff;
-            border-radius: 20px;
-            padding: 20px;
-            width: 300px;
-            position: fixed;
-            top: 120px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 999;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+Oder stelle einfach eine Frage, wie 'Kann meine Erkrankung auch ambulant behandelt werden?'
+""")
+    
 
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
-# Placeholder for the popup message
-popup_placeholder = st.empty()
-
-# Delay for 5 seconds
-time.sleep(1)
-
-# Display the popup message
-popup_placeholder.markdown(
-    """
-    <div class="iphone-popup">
-        <p>Es scheint als hätte Ihr Arzt ein Röntgenbild hochgeladen. Möchten Sie mehr dazu erfahren?</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+prompt = st.chat_input("Frage etwas")
+if prompt:
+    with st.chat_message("user"):
+        st.write(prompt)
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("assistant"):
+        answer = "Dies ist eine Antwort"
+        st.write(answer)
+    st.session_state.messages.append({"role": "assistant", "content": answer})
