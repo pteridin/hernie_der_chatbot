@@ -22,15 +22,15 @@ hide_streamlit_widgets()
 
 openai.api_key = "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"
 
-with open("./primer.md", "r", encoding="utf-8") as primer_file:
+with open("assets/primer.md", "r", encoding="utf-8") as primer_file:
     prompt_primer = primer_file.read()
 
+with open("assets/info.md","r", encoding="utf-8") as info_file:
+    prompt_primer.replace("###INFO###", info_file.read())
 
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-
-
 
 # Write intro
 with st.chat_message("assistant"):
@@ -40,7 +40,7 @@ Ich bin ein digitaler Assistent zu deiner Erkrankung, und unterstütze dich bei 
 Du kannst Fragen zu deiner Erkrankung stellen und dich dazu beraten lassen, wie deine Erkrankung
 behandelt werden soll.
 
-Möchtest du die Informationen kompakt erhalten klicke auf diesen Link.
+Möchtest du die Informationen kompakt erhalten klicke auf diesen [Link](./info).
 
 Möchtest du dich mit einem Kassenmitarbeiter verbinden rufe unter folgender Nummer an: 0211-123455 
 

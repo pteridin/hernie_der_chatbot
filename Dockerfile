@@ -8,8 +8,7 @@ WORKDIR /var/chatbot
 RUN python3 -m venv ./venv
 RUN ./venv/bin/pip3 install openai streamlit
 
-ADD mockup.py ./
-ADD primer.md ./
+ADD src ./
 
 EXPOSE 8501/tcp
-CMD [ "/var/chatbot/venv/bin/streamlit", "run", "./mockup.py" ]
+CMD [ "/var/chatbot/venv/bin/streamlit", "run", "./app.py" ]
