@@ -7,6 +7,7 @@ openai.api_key = "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"
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+# Write intro
 with st.chat_message("assistant"):
     st.write("""Hallo hier ist Hernie! 👋
              
@@ -21,17 +22,21 @@ Möchtest du dich mit einem Kassenmitarbeiter verbinden rufe unter folgender Num
 Oder stelle einfach eine Frage, wie 'Kann meine Erkrankung auch ambulant behandelt werden?'
 """)
     
-
+# handle chat history
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
+
 
 prompt = st.chat_input("Frage etwas")
 if prompt:
     with st.chat_message("user"):
         st.write(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
+    
+    chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=st.session_state.messages)
+    answer = chat_completion.choices[0].message.content
     with st.chat_message("assistant"):
-        answer = "Dies ist eine Antwort"
         st.write(answer)
     st.session_state.messages.append({"role": "assistant", "content": answer})
+    
