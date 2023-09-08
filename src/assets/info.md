@@ -5,8 +5,9 @@ ICD: K40.9
 ## Wie wird das behandelt?
 
 Eine Operation ist nicht zwingend nötig. Tritt nur etwas Bauchfell durch die Bauchpforte und 
-bestehen keine Beschwerden, kann auf eine Operation zunächst verzichtet werden. Studien 
-haben untersucht, was passiert, wenn beschwerdefreie Leistenbrüche bei Männern nicht 
+bestehen keine Beschwerden, kann auf eine Operation zunächst verzichtet werden. 
+Und dann kann diese sowohl ambulant, als auch stationär durchgeführt werden.
+Studien haben untersucht, was passiert, wenn beschwerdefreie Leistenbrüche bei Männern nicht 
 gleich operiert werden. Sie zeigten, dass es keine Nachteile hat mit der Operation zu warten, 
 bis erste Beschwerden auftreten. Wichtig ist, zur Ärztin / zum Arzt zu gehen, sobald 
 Beschwerden auftreten. Bei starken Schmerzen, Fieber oder Übelkeit ist sofortige ärztliche 
@@ -14,10 +15,10 @@ Hilfe nötig, da der Darm dann eingeklemmt sein könnte.
 
 ## Welche Operationsverfahren sind möglich?
 
-Bei einem Eingri wird der Bruchsack samt Inhalt wieder in die Bauchhöhle zurück verlagert. 
+Bei einem Eingriff wird der Bruchsack samt Inhalt wieder in die Bauchhöhle zurück verlagert. 
 Anschließend wird die Lücke in der Bauchwand wieder verschlossen. Sie kann zusätzlich zum 
 körpereigenen Gewebe oder mit einem feinen Kunststonetz verstärkt werden. Man 
-unterscheidet folgende Operationsverfahren:
+unterscheidet folgende ambulante und stationäre Operationsverfahren:
 
 * Ohne Operation ohne Netz: Es wird durch einen längeren Hautschnitt von außen operiert 
 und die Bruchpforte mit benachbartem Bindegewebe vernäht.
@@ -34,6 +35,7 @@ Begleiterkrankungen können eine Rolle spielen. Alle drei Operationsverfahren ha
 Nachteile. 
 
 ## Welche Operationsmethode ist die richtige für mich?
+
 Der überwiegende Teil der betroffenen Patienten verbringt im Durchschnitt 2-3 Tage im 
 Krankenhaus. Bei einer ambulanten Operation verlässt der Patient 2 Stunden nach 
 Beendigung des Eingries die Operationsabteilung und ist auf dem Weg nach Hause. 
