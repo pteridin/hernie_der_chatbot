@@ -1,4 +1,4 @@
-# Hernie - Der Chatbot 🤖
+# Hernie - Der Chatbot ![🤖](src/assets/icon.png)
 
 Der Chatbot *Hernie* ist eine im Rahmen des [**5. HEALTH INSURANCE HACK&CON**](https://www.health-insurance-hack.de/) entwickelte Idee zur Förderung der Ambulantisierung im Gesundheitswesen. 
 
